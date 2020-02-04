@@ -1,0 +1,161 @@
+
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
+
+/*********** login as ************/
+.Loginas{
+  position: relative;
+    top: -100px;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    color: dodgerblue;
+    z-index: 3;
+}
+
+
+/********** Bottom Icons ************/
+.fa {
+     
+  margin-left: 150px;    
+  padding: 20px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  color: white;
+  margin: 15px 2px;
+  border-radius: 50%;
+}
+.fa-google {
+  background: #dd4b39;
+ color: white;
+ float: right; 
+ margin-right: 460px;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+  float: left;
+  margin-left: 650px;
+    
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+ float: left;  
+    margin-left: 440px;
+}
+
+/*****************button on dropdown ***********/
+
+.button-container{
+     position: absolute;
+    left: 485px;
+    top: -30px;
+padding: 5px 5px;
+
+}
+
+.dropbtn{
+  width: 350px;
+  background-color: limegreen;
+  color: black;
+  padding: 10px;    
+  font-size: 15px;
+  border-radius: 7px;
+  outline: none;
+  margin-bottom: 2px; 
+    font-size: 21px;
+}
+
+.dropdown{
+    position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: lawngreen;  
+  border-radius: 3px;    
+}
+
+.dropdown-content a {
+ font-size: 18px;   
+  color: black;
+  padding: 5px 6px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: black;
+    color: lawngreen; 
+    font-size: 19px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ .dropdown:hover .dropbtn {
+  background-color: darkgreen;
+    color: azure;
+}
+
+.dropdown #lgbt1{
+    background-color: red;
+}

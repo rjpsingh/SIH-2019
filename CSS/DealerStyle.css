@@ -1,0 +1,124 @@
+.body{
+    width: 100%;
+    background-color: lavender;
+    box-sizing: border-box;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;   
+  color: azure;
+font-family: 'Lora', serif;
+
+}
+
+#top{
+     background-color: whitesmoke;
+    color: aliceblue;
+   
+}
+
+.column-left {
+  margin-top: 5px;    
+  float: left;
+  width: 16.66%;
+  height: 900px;
+   background-color: #3dcd58;
+}
+
+
+.column-middle{
+    margin-top: 5px;
+    height: 900px;
+    float: left;
+    width: 83.34%;
+    background-color: silver;
+    
+    
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column{
+    width: 100%;
+   
+    background-color: silver;
+    text-align: center;
+    display: subgrid;
+}
+
+.header img {
+    margin: auto;
+    width: 472px;
+    height: 96px; 
+    box-sizing: content-box;
+}
+
+
+
+/************** Admin Left Column Details ************/
+.avatar{
+    display: block;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 1px solid silver;
+    justify-content: center;
+}
+
+#DealerName, #DealerPosition{
+    background-color: crimson;
+    color: antiquewhite;
+    text-align: center;
+}
+
+
+.flex-container {
+  margin-left: 2px;    
+  background-color: gainsboro;    
+  display: flex;
+  flex-direction: row;  
+  flex-flow: row wrap;    
+   
+}
+
+.flex-container > div {
+    color: white;
+    margin: 15px;
+    display: inline-flex;  
+
+}
+
+#VerifyFreelancers{
+    display: inline-flex;
+    padding: 5px;
+    background-color: orangered;
+    
+}
+
+#VerifyFreelancers a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#Stocks{
+    display: inline-flex;
+    padding: 5px;
+    background-color: dodgerblue;
+   
+}
+
+
+/********************* Graph *******************************/
+#Graph{
+    background-color: yellow;
+    height=500px; 
+    width=700x;
+}
+
+   

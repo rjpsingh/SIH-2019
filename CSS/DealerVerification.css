@@ -1,0 +1,12 @@
+.maincolumn{
+ background-color: darkgray;
+ padding: 20px; 
+ height: 700px; 
+ text-align: center;    
+}
+
+.dealerDiv{
+    background-color: dimgrey;
+    padding: 5px;
+    border-radius: 7px;
+}

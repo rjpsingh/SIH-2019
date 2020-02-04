@@ -1,0 +1,55 @@
+
+
+.u-vmenu ul li {
+	width: 170px;
+
+	list-style: none;
+}
+.u-vmenu ul ul{
+	display: none;
+}
+.u-vmenu > ul > li {
+	
+	background-size: 100% auto;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin-top: 3px;
+    
+}
+.u-vmenu ul li a {
+	max-height: 60px;
+	min-height: 30px;
+	line-height: 28px;
+	display: block;
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+	outline: none;
+}
+.u-vmenu > ul > li > a {
+	max-height: 60px;
+	line-height: 18px; 
+	font-weight: bold;
+	
+
+}
+.u-vmenu > ul > li > a:hover {
+ color: whitesmoke;
+
+}
+
+.u-vmenu > ul > li > ul  {
+    margin: 0;
+    padding: 0;
+	
+	background-size: 70%;
+}
+
+
+.u-vmenu ul li a[data-option='on']{
+	background: url(../images/vmenu/on.png) right center no-repeat;
+	color: red;
+}
+.u-vmenu ul li a[data-option='off'] {
+	background: url(../images/vmenu/off.png) right center no-repeat;
+}

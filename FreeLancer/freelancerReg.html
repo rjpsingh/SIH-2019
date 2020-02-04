@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- firebase connection -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <title>Freelancer Registration</title>
+    <link href="../CSS/Form.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../CSS/FreelancerRegForm.css">
+</head>
+
+<body>
+
+
+    <div class="maincontent">
+        <h1><b>Register As Freelancer</b></h1>
+        <hr>
+        <div id="registration" class="content">
+
+            <table>
+                <tr>
+                    <td>
+                        <b>Name:</b></td>
+                    <td> <input type="text" id='name' name=""></td>
+                </tr><br>
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td><input type="Email" id="email" name=""></td><br><br>
+                    <td><b>Generate Password:</b></td>
+                    <td><input type="password" id="pass" name=""></td><br>
+                    
+                    
+                </tr><br>
+                <tr>
+                    <td><b>Contact:</b></td>
+                    <td><input type="tel" id="contact" name=""></td>
+                </tr><br>
+                <tr>
+                    <td><b>Freelancer Type:</b></td>
+                    <td><select id="type">
+                            <option>None</option>
+                            <option value="Electrician">Electrician</option>
+                            <option value="Solar Expert">Solar Expert</option>
+                            <option value="Energy Manager">Energy Manager</option>
+
+                        </select></td>
+                </tr>
+                  <tr>
+                    <td><b>Work Scale:</b></td>
+                    <td><select id="Worktype">
+                            <option>None</option>
+                            <option value="Large">Large Industry</option>
+                            <option value="Medium">Medium Industry</option>
+                            <option value="Small">Small Industry</option>
+
+                        </select></td>
+                </tr>
+                
+                <tr>
+                    <td><b>City:</b></td>
+                    <td><input type="text" name="" id="city"></td>
+                </tr><br>
+                <tr>
+                    <td><b>Pin Code:</b></td>
+                    <td><input type="num" id="pincode" pattern="[0-9]{6}" name=""></td>
+                </tr><br>
+                <tr>
+                    <td><b>Upload Id Proof:</b></td>
+                    <td><input type="file" name="" id="idproof"></td>
+                </tr><br><br>
+                <tr>
+                    <td><b>Certification Upload:</b></td>
+                    <td><input type="file" name="" id="certificate"></td>
+                </tr>
+            </table><hr>
+            <button id="submitform"><b>Submit Request</b></button>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="freelancerReg.js"></script>
+</body>
+</html>

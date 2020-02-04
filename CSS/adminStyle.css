@@ -1,0 +1,271 @@
+.body{
+    width: 100%;
+    background-color: lavender;
+    box-sizing: border-box;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;   
+  color: azure;
+font-family: 'Lora', serif;
+
+}
+
+#top{
+     background-color: whitesmoke;
+    color: aliceblue;
+   
+}
+
+.column-left {
+  margin-top: 5px;    
+  float: left;
+  width: 16.66%;
+  height: 900px;
+   background-color: rgb(0,0,0.5);
+}
+
+
+.column-middle{
+    margin-top: 5px;
+    height: 900px;
+    float: left;
+    width: 83.34%;
+    background-color: white;
+    
+    
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column{
+    width: 100%;
+   
+    background-color: silver;
+    text-align: center;
+    display: subgrid;
+}
+
+.header img {
+    margin: auto;
+    width: 472px;
+    height: 96px; 
+    box-sizing: content-box;
+}
+
+/*     NavaBar         */
+ #navbar {
+  overflow: hidden;
+  background-color: #3dcd58;
+  z-index: 1;
+  border: 3px solid green;
+  border-radius: 7px;    
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;    
+}
+
+
+#navbar img{
+    margin: 2px 2px 2px 20px;
+    float: left;
+    cursor: pointer;
+}
+
+#navbar input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  border-radius: 7px 0 0 7px;    
+}
+
+#navbar .search-container button {
+  float: right;
+  padding-top: 9px;    
+  padding: 2px;     
+  background: #ddd;
+  font-size: 17px;
+  border: none;  
+  border-radius: 7px;   
+  cursor: pointer;
+  border-radius: 0 7px 7px 0;      
+}
+
+#navbar .search-container{
+    position: absolute;
+        right: 80px;
+    margin-top: 6px;
+       
+    display: inline-block;
+}
+
+#navbar #user img {
+      position: absolute;
+    margin-top: 7px;
+    right: 15px;
+}
+
+/************** Admin Left Column Details ************/
+.avatar{
+    display: block;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 1px solid silver;
+    justify-content: center;
+}
+
+#AdminName, #AdminPosition{
+    background-color: crimson;
+    color: antiquewhite;
+    text-align: center;
+}
+
+/*--------------- Flex Container -------------*/
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+  font-family: 'Patua One', serif;
+  letter-spacing: 2px;
+}
+*/
+
+.flex-container {
+  margin-left: 2px;    
+  background-color: gainsboro;    
+  display: flex;
+  flex-direction: row;  
+  flex-flow: row wrap;    
+   
+}
+
+.flex-container > div {
+     color: white;
+    
+    margin: 11px;
+    display: inline-flex;  
+
+}
+
+#Incomecard{
+    background-color: #007bff;
+    padding: 11px;
+    width: 232px;
+    height: 80px;
+}
+
+#Expensecard{
+    background-color: #20c997;
+    padding: 11px;
+    width: 232px;
+    height: 80px;
+}
+
+#Assetscard{
+    padding: 11px;
+    width: 232px;
+    height: 80px;
+    background-color: #6f42c1;
+}
+
+#Dealerscard{
+    padding: 11px;
+    width: 232px;
+    height: 80px;
+    background-color: #dc3545;
+}
+
+.flex-container h6  {
+    margin: 0;
+    position: relative;
+    top: 7px;
+    left: 32px;
+    font-size: 14px;
+}
+
+.flex-container h2 {
+       font-size: 33px;
+    margin-top: 41px;
+    position: relative;
+    right: 45px;
+    font-weight: bold; 
+}
+
+#ManageSettings{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 259px;
+    height: 200px;
+    color: black;
+    background-color: salmon;
+    justify-content: flex-start;
+    
+}
+
+#ManageSettings > #settingimg{
+        margin: 0;
+/*
+    position: relative;
+    top: -22px;
+    left: 12px;
+*/
+    padding: 0;
+}
+
+#ManageSettings h2{
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    top: -42px;
+    left: 83px;
+    
+}
+
+#ManageProduct{
+    display: inline-flex;
+    padding: 5px;
+    background-color: orangered;
+    margin-top: 0;
+}
+#ManageProduct a{
+    text-decoration: none;
+    color: black;
+}
+
+#ManageServices{
+    display: inline-flex;
+    padding: 5px;
+    background-color: orangered;
+}
+
+#Graph{
+    background-color: dimgrey;
+    height=500px; 
+    width=850px;
+}
+
+#Request{
+    text-align: center;
+    background-color: brown;
+    font-size: 16px;
+    color: wheat;
+    width: 250px;
+    height: 50px;
+    padding: 5px;
+    position: relative;
+    bottom: 126px;
+    margin-left: 23px;
+}

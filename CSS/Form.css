@@ -1,0 +1,156 @@
+
+/********** sign up ************/
+.modal-content input[type=text],.modal-content input[type=email],.modal-content input[type=tel]  {
+  width: 100%;
+  padding: 15px 5px;    
+  margin: 5px 0 20px 0;   
+  border-radius: 7px;    
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus ,input[type=email]:focus,input[type=tel]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+input[type=textarea]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+
+
+/* Set a style for all buttons */
+.LargeIndutryButton , signupbutton{
+  background-color: gray;
+  color: black;
+  padding: 14px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;    
+  width: 90%;
+  border-radius: 3px; 
+     
+}
+
+.LargeIndutryButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.modal-content button:hover{
+    opacity: 1;
+}
+.signupbtn , .cancelbtn{
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer; 
+    margin-top: 40px ;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 45px;
+  opacity: 0.9;
+  border: 2px solid black;
+ border-radius: 2px;    
+}
+
+.signupbtn {
+  padding: 14px 20px;
+  background-color: dodgerblue;
+    margin-left: 200px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.signupbtn:hover{
+    background-color: blue;
+    color: whitesmoke;
+    font: 20px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+    margin-left: 150px;
+  background-color: red;
+    border-radius: 5px;
+        font-weight: bold;
+}
+
+.cancelbtn:hover{
+    background-color: crimson;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 25%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-image: url(../Images/b.jpg);
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #3dcd58;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 2px solid black;
+  padding: 5px;    
+      -webkit-box-shadow: 10px 4px 19px 2px rgba(28,168,168,1);
+-moz-box-shadow: 10px 4px 19px 2px rgba(28,168,168,1);
+box-shadow: 10px 4px 19px 2px rgba(28,168,168,1);
+    
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid black;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

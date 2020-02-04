@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>ManageProducts</title>
+
+    <!-- firebase connection -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../CSS/ManageProduct.css">
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="column" id="top">
+            <div class="header">
+                <img src="../Images/schneider.png">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="navbar">
+        <img src="../Images/as.png">
+        <div class="search-container">
+            <form action="javascript code">
+                <input id="searchinput" type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="large material-icons">search</i></button>
+            </form>
+        </div>
+        <div id="user"> <img src="../Images/ass.png"> </div>
+    </div>
+
+    <div class="Productrow">
+        <div class="ProductColumn" id="Addcol">
+            <h1>Add New Products</h1>
+
+            <div>
+                Upload Product Image: <input type="file" id="pic"><br><br>
+                <p id="storeurl" style="display: none"></p><br><br>
+                <table>
+                    <tr>
+                        <td> Product Id:</td>
+                        <td> <input type="text" id="prodid"></td>
+                    </tr>
+                    <tr>
+                        <td>Product Name:</td>
+                        <td> <input type="text" id="prodname"></td>
+                    </tr>
+                    <tr>
+                        <td>Range:</td>
+                        <td> <input type="text" id="range"></td>
+                    </tr>
+                    <tr>
+                        <td>Product Type:</td>
+                        <td> <select id="type">
+                                <option value="Switches&Sockets">Switches&Sockets</option>
+                                <option value="Miniature circuit breker">Miniature circuit breaker</option>
+                                <option value="Data Sockets">Data Sockets</option>
+                                <option value='Socket & Outlets'>Socket & Outlets</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Device Presentation :</td>
+                        <td> <input type="text" id="presentation"></td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td> <input type="text" id="descript"></td>
+                    </tr>
+                    <tr>
+                        <td>Operatinal Voltage:</td>
+                        <td><input type="number" id="voltage"></td>
+                    </tr>
+                    <tr>
+                        <td>Rated Current :</td>
+                        <td> <input type="number" id="curr"></td>
+                    </tr>
+                    <tr>
+                        <td>Color:</td>
+                        <td><input type="text" id="color"></td>
+                    </tr>
+                    <tr>
+                        <td>Official Website Product Link:</td>
+                        <td> <input type="text" id="ref"></td>
+                    </tr>
+                </table>
+                <br><br>
+                <button id="newproductentry">Submit Product</button><br><br>
+
+
+            </div>
+        </div>
+
+        <div class="ProductColumn" id="updatecol">
+            <h1>Update Product</h1>
+
+            <div>
+                <table>
+                    <tr>
+                        <td>Enter Product ID:</td>
+                        <td><input type="text" id="prodid"></td>
+                    </tr>
+                    <tr>
+                        <td>Select Field To update:</td>
+                        <td><select id="selectfield">
+                                <option>None</option>
+                                <option value="Name">Product Name</option>
+                                <option value="MRP">MRP</option>
+                                <option value="Range">RANGE</option>
+                                <option value="ProductType">Product Type</option>
+                                <option value="DevicePresentation">Device Presentation</option>
+                                <option value="Description">Description</option>
+                                <option value="OperationalVoltage">OPerational Voltage</option>
+                                <option value="RatedCurrent">Rated Current</option>
+                                <option value="Color">Color</option>
+                                <option value="CompleteRef">Reference Page</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Value:</td>
+                        <td><input type="text" id="val"></td>
+                    </tr>
+                </table>
+                <br><br>
+                <button id="update">Update Product</button>
+            </div>
+        </div>
+
+        <div class="ProductColumn" id="delcol">
+            <h1>Delete Product</h1>
+
+            <div>
+                Enter Product Id: <input type='text' id="deleteprodid">
+                <br>
+                <br>
+                <br>
+                <button id="deleteprod">Delete Product</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="row">
+        <div class="column" id="footer">
+            <div id='Contact'>
+
+
+                <div>
+                    <h4>Contact Details</h4>
+                </div>
+                <div class="siteDetail">
+                    <a href="#">person 1</a>
+                    <a href="#">email address</a>
+                    <a href="#">Address</a>
+                    <a href="#">person 2</a>
+                    <a href="#">mobile number</a>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+    <script src="../Javascript/AdminNewProduct.js"></script>>
+    <script src="../Javascript/AdminupdateProduct.js"></script>>
+    <script src="../Javascript/AdminDeleteProduct.js"></script>>
+
+
+
+</body>
+
+</html>

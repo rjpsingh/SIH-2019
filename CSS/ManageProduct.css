@@ -1,0 +1,73 @@
+.ProductColumn{
+  float: left;
+  width: 30.7%;
+  padding: 15px;
+    background-color: gainsboro;
+   border: 2px solid black;
+    height: 580px;
+    align-content: center;
+}
+
+.ProductColumn input[type=text],.ProductColumn input[type=number]{
+  color: darkgreen;
+  outline: none;
+  border-radius: 5px;
+  padding: 2px;
+  width: 100%;    
+}
+.ProductColumn select{
+  background-color: lawngreen;
+  outline: none;
+  border-radius: 5px;
+  padding: 2px;
+  width: 100%; 
+    
+}
+
+.ProductColumn button{
+	-moz-box-shadow: 3px 4px 0px 0px #3dc21b;
+	-webkit-box-shadow: 3px 4px 0px 0px #3dc21b;
+	box-shadow: 3px 4px 0px 0px #3dc21b;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #185728), color-stop(1, #5cbf2a));
+	background:-moz-linear-gradient(top, #185728 5%, #5cbf2a 100%);
+	background:-webkit-linear-gradient(top, #185728 5%, #5cbf2a 100%);
+	background:-o-linear-gradient(top, #185728 5%, #5cbf2a 100%);
+	background:-ms-linear-gradient(top, #185728 5%, #5cbf2a 100%);
+	background:linear-gradient(to bottom, #185728 5%, #5cbf2a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#185728', endColorstr='#5cbf2a',GradientType=0);
+	background-color:#185728;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.ProductColumn button:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5cbf2a), color-stop(1, #185728));
+	background:-moz-linear-gradient(top, #5cbf2a 5%, #185728 100%);
+	background:-webkit-linear-gradient(top, #5cbf2a 5%, #185728 100%);
+	background:-o-linear-gradient(top, #5cbf2a 5%, #185728 100%);
+	background:-ms-linear-gradient(top, #5cbf2a 5%, #185728 100%);
+	background:linear-gradient(to bottom, #5cbf2a 5%, #185728 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cbf2a', endColorstr='#185728',GradientType=0);
+	background-color:#5cbf2a;
+}
+
+/* Clear floats after the columns */
+.Productrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.Productrow{
+    background-color: gainsboro;
+}

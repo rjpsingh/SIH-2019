@@ -1,0 +1,41 @@
+         
+           .Footer a{
+              text-decoration: none;
+              outline: none;
+          }
+          .Footer{
+              width: 100%;
+              height: auto;
+              margin: auto;
+              background-color: black;
+          }
+          .Footer h2{
+              text-align: center;
+              color: green;
+              background-color: grey;
+              border: 2px solid black;
+              border-radius: 9%;
+          }
+          .Footer h2:hover{
+              background-color: whitesmoke;
+          }
+          .Footer ul{
+              margin: 0px;
+              padding: 0px;
+              text-align: center;
+          }
+          .Footer ul li{
+              display: block;
+              margin: 0px,15px;
+          }
+          .Footer ul li a{
+              font-family: arial;
+              font-size: 14px;
+              font-weight: 500;
+              color: #fff;
+              text-transform: uppercase;
+              color: grey;
+          }
+          .Footer ul li a:hover{
+              color: green;
+          }

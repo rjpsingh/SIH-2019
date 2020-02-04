@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <!-- firebase connection -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="../CSS/DealerRegistration.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <title>Schneider Electric /Dealer registration</title>
+
+
+</head>
+
+<body>
+    <input type="text" id='store' style="display: none" name="">
+    <div class="Dform" id="D1">
+
+        <form class="Dformcontent">
+            <div id="dealerform" class="container">
+                <h1 style="font-family:times new roman;">Dealer Registration Form </h1>
+                <p style="font-size:20px;">Please fill in this form to request to register yourself.</p>
+                <hr />
+
+                <table style="margin:0px auto;width:80%;font-family:sans-serif;font-size:20px;">
+                    <tr>
+                        <td><label><b>Owner Name</b></label></td>
+                        <td><input type="text" id="ownername" placeholder="Owner name" name="Company Name" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label><b>Store Name</b></label></td>
+                        <td><input type="text" id="storename" placeholder="Store Name" name="Store Name" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label><b>Email Address</b></label></td>
+                        <td><input type="email" id="dealermail" placeholder="Enter Email" name="Company email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label><b>Password</b></label></td>
+                        <td><input type="password" id="pass" placeholder="Enter Pass" name="Company pass" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label><b>Contact</b></label></td>
+                        <td><input type="tel" id="contact" placeholder="Contact" name="Company Contact" required></td>
+                    </tr>
+                    <tr>
+                        <td><label><b>GST NO</b></label></td>
+                        <td><input type="text" id="gstno" placeholder="GST NO" name="Company Contact" required></td>
+                    </tr>
+                      <tr>
+                    <td><label><b>Document upload</b></label></td>
+                    <td><input type="file" id="document" name="Company Contact" required></td>
+                    </tr>
+
+
+
+                    <tr id="adr">
+                        <td><label><b>Address</b></label></td>
+
+                        <td>
+                            <table id="addtable" cellpadding="15">
+                                <tr>
+                                    <td><input type="text" id="address1" placeholder="Address-Line 1" name="Address1" required></td>
+                                    <td><input type="text" id="address2" placeholder="Address-Line 2" name="Address2" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" id="state" placeholder="State" name="state" required></td>
+                                    <td><input type="text" id="pincode" placeholder="PIN Code" name="pin" required></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td colspan="2"><label>
+                                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"><i> I agree with company terms & Condition.</i>
+                            </label></td>
+                    </tr>
+
+                    <tr>
+                        <td><button type="reset" class="cancelbtn">Reset</button></td>
+
+                        <td><a href="#"><input value="NEXT" type="button" id="submitdealer" class="signupbtn" /></a></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" style="text-align:right;font-size:15px;">
+                            <p>For more<a href="#" style="color:dodgerblue"> Product & Services</a></p>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <div style="display: none" id="verifyphone">
+    <button id='vrfybtn'>verify Phone</button>
+    </div>
+    
+    <script type="text/javascript" src="../Javascript/DealerRegistration.js"></script>
+</body>
+</html>

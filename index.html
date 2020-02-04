@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="filters/css/vmenuModule.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+
+    <title>schneider</title>
+
+    <!-- firebase connection -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-functions.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="CSS/Form.css">
+<!--    <link rel="stylesheet" href="CSS/Dropdown.css">-->
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/signincss.css">
+    <link rel="stylesheet" href="searchmodal.css">
+    <script src="searchmodal.js"></script>
+
+    <script>
+        var config = {
+            apiKey: "AIzaSyB2DZ3NIC_Lo5gqHhWTn1kX5M_LCVIZ7zY",
+            authDomain: "myschnieder.firebaseapp.com",
+            databaseURL: "https://myschnieder.firebaseio.com",
+            projectId: "myschnieder",
+            storageBucket: "myschnieder.appspot.com",
+            messagingSenderId: "105921094692"
+        };
+        firebase.initializeApp(config);
+        const firestore = firebase.firestore();
+
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <div class="row">
+        <div class="column" id="top">
+            <div class="header">
+                <img src="Images/schneider.png">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="navbar">
+        <img src="Images/as.png">
+        <div class="search-container">
+            <!--            <form action="javascript code">-->
+            <input id="searchinput" type="text" placeholder="Search.." name="search">
+            <button id="submit" onclick="searching()"><i class="large material-icons">search</i></button>
+            <!--            </form>-->
+        </div>
+      <script src="searchbar.js"></script>
+
+
+        <button class='userButton' onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="Images/ass.png">
+        </button>
+        <div id="cartlogo"><a href="Cart/cart.html"><img src="Images/cart.png"></a> </div>
+
+    </div>
+
+
+
+    <div id="id01" class="modal1">
+        <div class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+
+            <div class="container">
+                <div id="login_div">
+                    <select id="selector"><label>LOGIN AS</label>
+                        <option id="fa">Freelancer</option>
+                        <option id="ra">Retailer</option>
+                        <option id="da">Dealer</option>
+                        <option id="aa">Admin</option>
+                    </select>
+                    <input type="text" placeholder="Enter Username" name="uname" required id="email_field">
+                    <input type="password" placeholder="Enter Password" name="psw" required id="password_field">
+                    <button onclick="login()">Login</button>
+                    <span class="psw"><a href="#">Forgot password?</a></span>
+                </div>
+                <div id="logout_div">
+                    <p id="user_para"> </p>
+                    <button onclick="dashboard()">Dashboard</button>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--    //modal ends-->
+
+
+
+    <div class="row">
+        <div class="column" id="carousel">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="Images/c1.jpg">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="Images/c2.jpg">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="Images/c3.jpg">
+                    <div class="text">Caption Three</div>
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+<!-- Filters -->
+    <div class="row">
+        <div class="column-left">
+            <a class="filterbutton">Select Category</a>
+            <div id="content">
+                <div class="u-vmenu">
+                    <ul hidden>
+                        <li>
+                            <a>Residential and Small Business</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a href="" onclick="filter(this)">Electrical Protection and Control</a></li>
+                                    <li><a href="" onclick="filter(this)">Home Automation</a></li>
+                                    <li><a href="" onclick="filter(this)">Home Security</a></li>
+                                    <li><a href="" onclick="filter(this)">Installation Material and System</a></li>
+                                    <li><a href="" onclick="filter(this)">Light Switches and Electrical Sockets</a></li>
+                                    <li><a href="" onclick="filter(this)">Network Infrastructure and Connectivity</a></li>
+                                    <li><a href="" onclick="filter(this)">Uninterruptible Power Supply(UPS)</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Building Automation and Control</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Access Control</a></li>
+                                    <li><a>Building Management</a></li>
+                                    <li><a>Network Infrastructure and Connectivity</a></li>
+                                    <li><a>Power Monitoring and Control</a></li>
+                                    <li><a>Power Quality and Power Factor Correction</a></li>
+                                    <li><a>Sensors</a></li>
+                                    <li><a>Valves and valve Actuators</a></li>
+                                    <li><a>Variable Speed Drives and Soft Starters</a></li>
+                                    <li><a>Video Management System</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Low Voltage Products and Systems</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Busway and Cable Management</a></li>
+                                    <li><a>Circuit Breakers and Switches</a></li>
+                                    <li><a>Contactors and Protection Relays</a></li>
+                                    <li><a>Electrical Protection and Control</a></li>
+                                    <li><a>Fuse and Safety Switches</a></li>
+                                    <li><a>Motor Starters and Protection Components</a></li>
+                                    <li><a>Power Monitoring and Control</a></li>
+                                    <li><a>Power Quality and Power Factor Correction</a></li>
+                                    <li><a>Pushbuttons, Switches, Pilot Lights and Joysticks</a></li>
+                                    <li><a>Software</a></li>
+                                    <li><a>Surge Protection and Power Conditioning</a></li>
+                                    <li><a>Switchboards and Enclosures</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Solar and Energy Storage</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Solar OFF-Grid and Back-Up</a></li>
+                                    <li><a>Utility-Scale</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Access to Energy</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Collective Solutions</a></li>
+                                    <li><a>Home Systems</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Medium Voltage Distribution and Grid Automation</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Feeder Automation</a></li>
+                                    <li><a>Grid Automation and SCADA Software</a></li>
+                                    <li><a>Medium Voltage Switchgear</a></li>
+                                    <li><a>Medium-Voltage Transformers</a></li>
+                                    <li><a>Outdoor Equipment</a></li>
+                                    <li><a>Power Monitoring and Control</a></li>
+                                    <li><a>Protection Relays by Application</a></li>
+                                    <li><a>Protection Relays by Range</a></li>
+                                    <li><a>Substation Automation</a></li>
+                                    <li><a>Switchgear Automation</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Critical Power, Cooling and Racks</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Cooling</a></li>
+                                    <li><a>Critical Power and Cooling Services</a></li>
+                                    <li><a>Data Center Software</a></li>
+                                    <li><a>IT Power Distribution</a></li>
+                                    <li><a>Prefabricated Data Center Modules</a></li>
+                                    <li><a>Racks and Accessories</a></li>
+                                    <li><a>Security and Environmental Monitoring</a></li>
+                                    <li><a>Surge Protection and Power Conditioning</a></li>
+                                    <li><a>Uninterruptible Power Supply (UPS)</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Industrial Automation and Control</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Boxes, Cabling and Interfaces</a></li>
+                                    <li><a>Contactors and Protection Relays</a></li>
+                                    <li><a>Enclosures and Accessories</a></li>
+                                    <li><a>HMI (Terminals and Industrial PC)</a></li>
+                                    <li><a>Industrial Communication</a></li>
+                                    <li><a>Interface, Measurement and Control Relays</a></li>
+                                    <li><a>Measurement and Instrumentation</a></li>
+                                    <li><a>Motion Control and Robotics</a></li>
+                                    <li><a>Motor Starters and Protection Components</a></li>
+                                    <li><a>PLC, PAC and Dedicated Controllers</a></li>
+                                    <li><a>Power Supplies, Power Protection and Transformers</a></li>
+                                    <li><a>Process Control and Safety</a></li>
+                                    <li><a>Pushbuttons, Switches, Pilot Lights and Joystics</a></li>
+                                    <li><a>Sensors and RFID System</a></li>
+                                    <li><a>Signaling Units</a></li>
+                                    <li><a>Software</a></li>
+                                    <li><a>Telemetry and Remote SCADA Systems</a></li>
+                                    <li><a>Variable Speed Drives and Soft Starters</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Software</a>
+                            <ul>
+                                <em aria-hidden="true">
+                                    <li><a>Software by Function</a></li>
+                                    <li><a>Software by Name</a></li>
+                                </em>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        
+<div id="myModals" class="searchmodal">
+
+  <!-- Modal content -->
+  <div class="searchmodal-content">
+    <span class="searchclose">&times;</span>
+    <ul id="searchrslt"></ul><br><br>
+  </div>
+
+</div>
+        
+        
+
+        <div class="column-middle">
+
+            <div id='products' class="card-deck">
+
+
+            </div>
+
+
+            <div class="center">
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <div class="row">
+        <div class="column" id="footer">
+           <div id='Contact'>
+         <div class="Footer">
+                <div class="heading" ><h2>Contact Details</h2></div>
+                <ul class="siteDetail">    
+                  <li><a href="#">person 1</a></li>
+                  <li><a href="#">email address</a></li>
+                  <li><a href="#">Address</a></li>
+                    
+                  <li><a href="#">person 2</a></li>
+                  <li><a href="#">mobile number</a></li>
+                </ul>
+         </div> 
+        </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <!--script for carousel-->
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        // script for filter dropdown   
+
+    </script>
+
+
+
+    <script src="index.js"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="filters/js/vmenuModule.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".u-vmenu").vmenuModule({
+                Speed: 200,
+                autostart: true,
+                autohide: true
+            });
+        });
+
+    </script>
+
+  
+
+
+    <script type="text/javascript" src="Javascript/productList.js"></script>
+
+    <script src="https://static.landbot.io/landbot-widget/landbot-widget-1.0.0.js"></script>
+    <script>
+        var myLandbotLivechat = new LandbotLivechat({
+            index: 'https://landbot.io/u/H-140524-5CUGM7JM5QBO8F3O/index.html',
+        });
+
+    </script>
+    <script>
+        // Show a proactive message on landbot load
+        myLandbotLivechat.on('landbot-load', () => {
+            myLandbotLivechat.sendProactive("Need Help?");
+        });
+
+    </script>
+
+</body>
+
+</html>
